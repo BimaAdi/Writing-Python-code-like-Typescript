@@ -98,6 +98,7 @@ def send_email(sender, receiver, message):
     ...
 ```
 What's cool about docstring it's editor compatible. In vscode it will shown docstring when you hover over a function. Most library in python use docstring to document it's function.
+![vscode docstring](./img/vscode%20show%20docstring.png)
 
 
 The problem with docstring is document syncronization. How you make sure that the docstring always sync with code implementation. You cannot put it on test right. I hear that from random person on the internet "Having outdated documentation is worse than having no documentation".
@@ -106,6 +107,7 @@ The problem with docstring is document syncronization. How you make sure that th
 ### Doctest
 Btw You can test docstring using doctest kinda. Doctest testing your docstring by running example on your docstring. Doctest is already preinstalled in python so you don't need external depedencies. let's see this example create new file called my_math.py then put this code.
 ```python
+# my_math.py
 def add(x, y):
     """Add two integer
 
@@ -143,6 +145,7 @@ Test passed
 ```
 If you make mistake on code example it will return an error. 
 ```python
+# my_math.py
 def add(x, y):
     """Add two integer
 
@@ -281,6 +284,7 @@ res = add("hello", "world")
 print(res)
 ```
 1. [mypy](https://mypy.readthedocs.io/)
+
 The "OG" of python type checker. To install it just using pip `pip install mypy`. Now let's use mypy to typecheck this file. Run `mypy wrong.py`. It will shown type error which is nice.
 ```bash
 wrong.py:5: error: Argument 1 to "add" has incompatible type "str"; expected "int"  [arg-type]
@@ -290,6 +294,7 @@ Found 2 errors in 1 file (checked 1 source file)
 btw you can run mypy on entire project by using `mypy .`.
 
 2. [pyright](https://microsoft.github.io/pyright/)
+
 Another typechecker is pyright. It created by microsoft. It's same like mypy install through pip `pip install pyright`. Then run it `pyright wrong.py`. It will shown this error.
 ```bash
 ~/typescript-in-python/wrong.py
@@ -302,6 +307,7 @@ Another typechecker is pyright. It created by microsoft. It's same like mypy ins
 It said that it's more faster than mypy but I found that's not much diffrent. Maybe my code base it's to small. Also pyright implement more python standard than mypy you can see on [https://microsoft.github.io/pyright/#/mypy-comparison](https://microsoft.github.io/pyright/#/mypy-comparison). Personaly I prefer mypy than pyright because the error message were more readable.
 
 3. [pylyzer](https://github.com/mtshiba/pylyzer)
+
 Speaking of performance and speed another new python typechecker pylyzer. It's written in rust. You can install it through pip `pip install pylyzer` or through cargo (rust package manager) `cargo install pylyzer --locked`. Then run it `pylyzer wrong.py`. It will shown this error.
 ```bash
 Start checking: wrong.py

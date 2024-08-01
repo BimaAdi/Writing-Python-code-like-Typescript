@@ -1,6 +1,6 @@
 # Writing Python code like Typescript
-This repository store blog and code example on the blog "Writing Python code like Typescript". you can see full blog on dev.to []() or on this repo [blog](Blog.md).
-TODO add dev.to link
+This repository store blog and code example on the blog "Writing Python code like Typescript". you can see full blog on dev.to [https://dev.to/bimaadi/writing-python-code-like-typescript-1le](https://dev.to/bimaadi/writing-python-code-like-typescript-1le) or on this repo [blog](Blog.md).
+
 
 ## Requirement
 - python 3.12
